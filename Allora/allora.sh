@@ -5,7 +5,7 @@ source ~/.bashrc
 mkdir data
 sudo chmod -R 777 data
 allorad keys add dongqn --recover
-cp -r .allorad /data
+cp -r .allorad /root/data
 git clone https://github.com/allora-network/basic-coin-prediction-node
 cd basic-coin-prediction-node
 mkdir worker-data1 worker-data2 worker-data3 worker-data4 worker-data5 worker-data6 head-data
