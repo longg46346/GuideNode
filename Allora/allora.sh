@@ -1,11 +1,4 @@
 #!/bin/bash
-curl -sSL https://raw.githubusercontent.com/allora-network/allora-chain/main/install.sh | bash -s -- v0.2.7
-echo "export PATH="$PATH:/root/.local/bin"" >> ~/.bashrc
-source ~/.bashrc
-mkdir data
-sudo chmod -R 777 data
-allorad keys add dongqn --recover
-cp -r .allorad /root/data
 git clone https://github.com/allora-network/basic-coin-prediction-node
 cd basic-coin-prediction-node
 mkdir worker-data1 worker-data2 worker-data3 worker-data4 worker-data5 worker-data6 head-data
@@ -93,11 +86,11 @@ services:
           --private-key=/data/keys/priv.bin --log-level=debug --port=9011 \
           --boot-nodes=/ip4/172.22.0.100/tcp/9010/p2p/$head_id,/dns/head-0-p2p.testnet-1.testnet.allora.network/tcp/32130/p2p/12D3KooWLBhsSucVVcyVCaM9pvK8E7tWBM9L19s7XQHqqejyqgEC,/dns/head-1-p2p.testnet-1.testnet.allora.network/tcp/32131/p2p/12D3KooWEUNWg7YHeeCtH88ju63RBfY5hbdv9hpv84ffEZpbJszt,/dns/head-2-p2p.testnet-1.testnet.allora.network/tcp/32132/p2p/12D3KooWATfUSo95wtZseHbogpckuFeSvpL4yks6XtvrjVHcCCXk \
           --topic=allora-topic-1-worker \
-          --allora-chain-key-name=dongqn \
+		  --allora-chain-worker-mode=worker \
+          --allora-chain-key-name=worker-1 \
           --allora-chain-restore-mnemonic='$wallet_seed' \
           --allora-node-rpc-address=https://allora-rpc.testnet-1.testnet.allora.network \
-          --allora-chain-topic-id=1 \
-          --allora-chain-key-name=worker-1
+          --allora-chain-topic-id=1
     volumes:
       - ./worker-data1:/data
     working_dir: /data
@@ -133,11 +126,11 @@ services:
           --private-key=/data/keys/priv.bin --log-level=debug --port=9012 \
           --boot-nodes=/ip4/172.22.0.100/tcp/9010/p2p/$head_id,/dns/head-0-p2p.testnet-1.testnet.allora.network/tcp/32130/p2p/12D3KooWLBhsSucVVcyVCaM9pvK8E7tWBM9L19s7XQHqqejyqgEC,/dns/head-1-p2p.testnet-1.testnet.allora.network/tcp/32131/p2p/12D3KooWEUNWg7YHeeCtH88ju63RBfY5hbdv9hpv84ffEZpbJszt,/dns/head-2-p2p.testnet-1.testnet.allora.network/tcp/32132/p2p/12D3KooWATfUSo95wtZseHbogpckuFeSvpL4yks6XtvrjVHcCCXk \
           --topic=allora-topic-2-worker \
-          --allora-chain-key-name=dongqn \
+		  --allora-chain-worker-mode=worker \
+          --allora-chain-key-name=worker-2 \
           --allora-chain-restore-mnemonic='$wallet_seed' \
           --allora-node-rpc-address=https://allora-rpc.testnet-1.testnet.allora.network \
-          --allora-chain-topic-id=2 \
-          --allora-chain-key-name=worker-2
+          --allora-chain-topic-id=2
     volumes:
       - ./worker-data2:/data
     working_dir: /data
@@ -173,11 +166,11 @@ services:
           --private-key=/data/keys/priv.bin --log-level=debug --port=9013 \
           --boot-nodes=/ip4/172.22.0.100/tcp/9010/p2p/$head_id,/dns/head-0-p2p.testnet-1.testnet.allora.network/tcp/32130/p2p/12D3KooWLBhsSucVVcyVCaM9pvK8E7tWBM9L19s7XQHqqejyqgEC,/dns/head-1-p2p.testnet-1.testnet.allora.network/tcp/32131/p2p/12D3KooWEUNWg7YHeeCtH88ju63RBfY5hbdv9hpv84ffEZpbJszt,/dns/head-2-p2p.testnet-1.testnet.allora.network/tcp/32132/p2p/12D3KooWATfUSo95wtZseHbogpckuFeSvpL4yks6XtvrjVHcCCXk \
           --topic=allora-topic-3-worker \
-          --allora-chain-key-name=dongqn \
+          --allora-chain-key-name=worker-3 \
+		  --allora-chain-worker-mode=worker \
           --allora-chain-restore-mnemonic='$wallet_seed' \
           --allora-node-rpc-address=https://allora-rpc.testnet-1.testnet.allora.network \
-          --allora-chain-topic-id=3 \
-          --allora-chain-key-name=worker-3
+          --allora-chain-topic-id=3
     volumes:
       - ./worker-data3:/data
     working_dir: /data
@@ -213,11 +206,11 @@ services:
           --private-key=/data/keys/priv.bin --log-level=debug --port=9014 \
           --boot-nodes=/ip4/172.22.0.100/tcp/9010/p2p/$head_id,/dns/head-0-p2p.testnet-1.testnet.allora.network/tcp/32130/p2p/12D3KooWLBhsSucVVcyVCaM9pvK8E7tWBM9L19s7XQHqqejyqgEC,/dns/head-1-p2p.testnet-1.testnet.allora.network/tcp/32131/p2p/12D3KooWEUNWg7YHeeCtH88ju63RBfY5hbdv9hpv84ffEZpbJszt,/dns/head-2-p2p.testnet-1.testnet.allora.network/tcp/32132/p2p/12D3KooWATfUSo95wtZseHbogpckuFeSvpL4yks6XtvrjVHcCCXk \
           --topic=allora-topic-4-worker \
-          --allora-chain-key-name=dongqn \
+          --allora-chain-key-name=worker-4 \
+		  --allora-chain-worker-mode=worker \
           --allora-chain-restore-mnemonic='$wallet_seed' \
           --allora-node-rpc-address=https://allora-rpc.testnet-1.testnet.allora.network \
-          --allora-chain-topic-id=4 \
-          --allora-chain-key-name=worker-4
+          --allora-chain-topic-id=4
     volumes:
       - ./worker-data4:/data
     working_dir: /data
@@ -253,11 +246,11 @@ services:
           --private-key=/data/keys/priv.bin --log-level=debug --port=9015 \
           --boot-nodes=/ip4/172.22.0.100/tcp/9010/p2p/$head_id,/dns/head-0-p2p.testnet-1.testnet.allora.network/tcp/32130/p2p/12D3KooWLBhsSucVVcyVCaM9pvK8E7tWBM9L19s7XQHqqejyqgEC,/dns/head-1-p2p.testnet-1.testnet.allora.network/tcp/32131/p2p/12D3KooWEUNWg7YHeeCtH88ju63RBfY5hbdv9hpv84ffEZpbJszt,/dns/head-2-p2p.testnet-1.testnet.allora.network/tcp/32132/p2p/12D3KooWATfUSo95wtZseHbogpckuFeSvpL4yks6XtvrjVHcCCXk \
           --topic=allora-topic-5-worker \
-          --allora-chain-key-name=dongqn \
+          --allora-chain-key-name=worker-5 \
+		  --allora-chain-worker-mode=worker \
           --allora-chain-restore-mnemonic='$wallet_seed' \
           --allora-node-rpc-address=https://allora-rpc.testnet-1.testnet.allora.network \
-          --allora-chain-topic-id=5 \
-          --allora-chain-key-name=worker-5
+          --allora-chain-topic-id=5
     volumes:
       - ./worker-data5:/data
     working_dir: /data
@@ -293,11 +286,11 @@ services:
           --private-key=/data/keys/priv.bin --log-level=debug --port=9016 \
           --boot-nodes=/ip4/172.22.0.100/tcp/9010/p2p/$head_id,/dns/head-0-p2p.testnet-1.testnet.allora.network/tcp/32130/p2p/12D3KooWLBhsSucVVcyVCaM9pvK8E7tWBM9L19s7XQHqqejyqgEC,/dns/head-1-p2p.testnet-1.testnet.allora.network/tcp/32131/p2p/12D3KooWEUNWg7YHeeCtH88ju63RBfY5hbdv9hpv84ffEZpbJszt,/dns/head-2-p2p.testnet-1.testnet.allora.network/tcp/32132/p2p/12D3KooWATfUSo95wtZseHbogpckuFeSvpL4yks6XtvrjVHcCCXk \
           --topic=allora-topic-6-worker \
-          --allora-chain-key-name=dongqn \
+          --allora-chain-key-name=worker-6 \
+		  --allora-chain-worker-mode=worker \
           --allora-chain-restore-mnemonic='$wallet_seed' \
           --allora-node-rpc-address=https://allora-rpc.testnet-1.testnet.allora.network \
-          --allora-chain-topic-id=6 \
-          --allora-chain-key-name=worker-6
+          --allora-chain-topic-id=6
     volumes:
       - ./worker-data6:/data
     working_dir: /data
