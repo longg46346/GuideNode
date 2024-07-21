@@ -89,7 +89,7 @@ services:
           --private-key=/data/keys/priv.bin --log-level=debug --port=9011 \
           --boot-nodes=/ip4/172.22.0.100/tcp/9010/p2p/$head_id,/dns/head-0-p2p.testnet-1.testnet.allora.network/tcp/32130/p2p/12D3KooWLBhsSucVVcyVCaM9pvK8E7tWBM9L19s7XQHqqejyqgEC,/dns/head-1-p2p.testnet-1.testnet.allora.network/tcp/32131/p2p/12D3KooWEUNWg7YHeeCtH88ju63RBfY5hbdv9hpv84ffEZpbJszt,/dns/head-2-p2p.testnet-1.testnet.allora.network/tcp/32132/p2p/12D3KooWATfUSo95wtZseHbogpckuFeSvpL4yks6XtvrjVHcCCXk \
           --topic=allora-topic-1-worker \
-	  --allora-chain-worker-mode=worker \
+	        --allora-chain-worker-mode=worker \
           --allora-chain-key-name=worker-1 \
           --allora-chain-restore-mnemonic='$wallet_seed' \
           --allora-node-rpc-address=https://allora-rpc.testnet-1.testnet.allora.network \
@@ -129,7 +129,7 @@ services:
           --private-key=/data/keys/priv.bin --log-level=debug --port=9012 \
           --boot-nodes=/ip4/172.22.0.100/tcp/9010/p2p/$head_id,/dns/head-0-p2p.testnet-1.testnet.allora.network/tcp/32130/p2p/12D3KooWLBhsSucVVcyVCaM9pvK8E7tWBM9L19s7XQHqqejyqgEC,/dns/head-1-p2p.testnet-1.testnet.allora.network/tcp/32131/p2p/12D3KooWEUNWg7YHeeCtH88ju63RBfY5hbdv9hpv84ffEZpbJszt,/dns/head-2-p2p.testnet-1.testnet.allora.network/tcp/32132/p2p/12D3KooWATfUSo95wtZseHbogpckuFeSvpL4yks6XtvrjVHcCCXk \
           --topic=allora-topic-2-worker \
-	  --allora-chain-worker-mode=worker \
+	        --allora-chain-worker-mode=worker \
           --allora-chain-key-name=worker-2 \
           --allora-chain-restore-mnemonic='$wallet_seed' \
           --allora-node-rpc-address=https://allora-rpc.testnet-1.testnet.allora.network \
@@ -170,7 +170,7 @@ services:
           --boot-nodes=/ip4/172.22.0.100/tcp/9010/p2p/$head_id,/dns/head-0-p2p.testnet-1.testnet.allora.network/tcp/32130/p2p/12D3KooWLBhsSucVVcyVCaM9pvK8E7tWBM9L19s7XQHqqejyqgEC,/dns/head-1-p2p.testnet-1.testnet.allora.network/tcp/32131/p2p/12D3KooWEUNWg7YHeeCtH88ju63RBfY5hbdv9hpv84ffEZpbJszt,/dns/head-2-p2p.testnet-1.testnet.allora.network/tcp/32132/p2p/12D3KooWATfUSo95wtZseHbogpckuFeSvpL4yks6XtvrjVHcCCXk \
           --topic=allora-topic-3-worker \
           --allora-chain-key-name=worker-3 \
-	  --allora-chain-worker-mode=worker \
+	        --allora-chain-worker-mode=worker \
           --allora-chain-restore-mnemonic='$wallet_seed' \
           --allora-node-rpc-address=https://allora-rpc.testnet-1.testnet.allora.network \
           --allora-chain-topic-id=3
@@ -210,7 +210,7 @@ services:
           --boot-nodes=/ip4/172.22.0.100/tcp/9010/p2p/$head_id,/dns/head-0-p2p.testnet-1.testnet.allora.network/tcp/32130/p2p/12D3KooWLBhsSucVVcyVCaM9pvK8E7tWBM9L19s7XQHqqejyqgEC,/dns/head-1-p2p.testnet-1.testnet.allora.network/tcp/32131/p2p/12D3KooWEUNWg7YHeeCtH88ju63RBfY5hbdv9hpv84ffEZpbJszt,/dns/head-2-p2p.testnet-1.testnet.allora.network/tcp/32132/p2p/12D3KooWATfUSo95wtZseHbogpckuFeSvpL4yks6XtvrjVHcCCXk \
           --topic=allora-topic-4-worker \
           --allora-chain-key-name=worker-4 \
-	  --allora-chain-worker-mode=worker \
+	        --allora-chain-worker-mode=worker \
           --allora-chain-restore-mnemonic='$wallet_seed' \
           --allora-node-rpc-address=https://allora-rpc.testnet-1.testnet.allora.network \
           --allora-chain-topic-id=4
@@ -250,7 +250,7 @@ services:
           --boot-nodes=/ip4/172.22.0.100/tcp/9010/p2p/$head_id,/dns/head-0-p2p.testnet-1.testnet.allora.network/tcp/32130/p2p/12D3KooWLBhsSucVVcyVCaM9pvK8E7tWBM9L19s7XQHqqejyqgEC,/dns/head-1-p2p.testnet-1.testnet.allora.network/tcp/32131/p2p/12D3KooWEUNWg7YHeeCtH88ju63RBfY5hbdv9hpv84ffEZpbJszt,/dns/head-2-p2p.testnet-1.testnet.allora.network/tcp/32132/p2p/12D3KooWATfUSo95wtZseHbogpckuFeSvpL4yks6XtvrjVHcCCXk \
           --topic=allora-topic-5-worker \
           --allora-chain-key-name=worker-5 \
-	  --allora-chain-worker-mode=worker \
+	        --allora-chain-worker-mode=worker \
           --allora-chain-restore-mnemonic='$wallet_seed' \
           --allora-node-rpc-address=https://allora-rpc.testnet-1.testnet.allora.network \
           --allora-chain-topic-id=5
@@ -290,7 +290,7 @@ services:
           --boot-nodes=/ip4/172.22.0.100/tcp/9010/p2p/$head_id,/dns/head-0-p2p.testnet-1.testnet.allora.network/tcp/32130/p2p/12D3KooWLBhsSucVVcyVCaM9pvK8E7tWBM9L19s7XQHqqejyqgEC,/dns/head-1-p2p.testnet-1.testnet.allora.network/tcp/32131/p2p/12D3KooWEUNWg7YHeeCtH88ju63RBfY5hbdv9hpv84ffEZpbJszt,/dns/head-2-p2p.testnet-1.testnet.allora.network/tcp/32132/p2p/12D3KooWATfUSo95wtZseHbogpckuFeSvpL4yks6XtvrjVHcCCXk \
           --topic=allora-topic-6-worker \
           --allora-chain-key-name=worker-6 \
-	  --allora-chain-worker-mode=worker \
+      	  --allora-chain-worker-mode=worker \
           --allora-chain-restore-mnemonic='$wallet_seed' \
           --allora-node-rpc-address=https://allora-rpc.testnet-1.testnet.allora.network \
           --allora-chain-topic-id=6
@@ -305,7 +305,7 @@ services:
         aliases:
           - worker
         ipv4_address: 172.22.0.16
-
+        
   worker-7:
     container_name: worker-7
     environment:
@@ -330,7 +330,7 @@ services:
           --boot-nodes=/ip4/172.22.0.100/tcp/9010/p2p/$head_id,/dns/head-0-p2p.testnet-1.testnet.allora.network/tcp/32130/p2p/12D3KooWLBhsSucVVcyVCaM9pvK8E7tWBM9L19s7XQHqqejyqgEC,/dns/head-1-p2p.testnet-1.testnet.allora.network/tcp/32131/p2p/12D3KooWEUNWg7YHeeCtH88ju63RBfY5hbdv9hpv84ffEZpbJszt,/dns/head-2-p2p.testnet-1.testnet.allora.network/tcp/32132/p2p/12D3KooWATfUSo95wtZseHbogpckuFeSvpL4yks6XtvrjVHcCCXk \
           --topic=allora-topic-7-worker \
           --allora-chain-key-name=worker-7 \
-	  --allora-chain-worker-mode=worker \
+      	  --allora-chain-worker-mode=worker \
           --allora-chain-restore-mnemonic='$wallet_seed' \
           --allora-node-rpc-address=https://allora-rpc.testnet-1.testnet.allora.network \
           --allora-chain-topic-id=7
@@ -345,7 +345,7 @@ services:
         aliases:
           - worker
         ipv4_address: 172.22.0.17
-
+        
   worker-8:
     container_name: worker-8
     environment:
@@ -370,7 +370,7 @@ services:
           --boot-nodes=/ip4/172.22.0.100/tcp/9010/p2p/$head_id,/dns/head-0-p2p.testnet-1.testnet.allora.network/tcp/32130/p2p/12D3KooWLBhsSucVVcyVCaM9pvK8E7tWBM9L19s7XQHqqejyqgEC,/dns/head-1-p2p.testnet-1.testnet.allora.network/tcp/32131/p2p/12D3KooWEUNWg7YHeeCtH88ju63RBfY5hbdv9hpv84ffEZpbJszt,/dns/head-2-p2p.testnet-1.testnet.allora.network/tcp/32132/p2p/12D3KooWATfUSo95wtZseHbogpckuFeSvpL4yks6XtvrjVHcCCXk \
           --topic=allora-topic-8-worker \
           --allora-chain-key-name=worker-8 \
-	  --allora-chain-worker-mode=worker \
+      	  --allora-chain-worker-mode=worker \
           --allora-chain-restore-mnemonic='$wallet_seed' \
           --allora-node-rpc-address=https://allora-rpc.testnet-1.testnet.allora.network \
           --allora-chain-topic-id=8
@@ -384,9 +384,9 @@ services:
       eth-model-local:
         aliases:
           - worker
-        ipv4_address: 172.22.0.18 
-
-   worker-9:
+        ipv4_address: 172.22.0.18
+        
+  worker-9:
     container_name: worker-9
     environment:
       - INFERENCE_API_ADDRESS=http://inference:8000
@@ -410,7 +410,7 @@ services:
           --boot-nodes=/ip4/172.22.0.100/tcp/9010/p2p/$head_id,/dns/head-0-p2p.testnet-1.testnet.allora.network/tcp/32130/p2p/12D3KooWLBhsSucVVcyVCaM9pvK8E7tWBM9L19s7XQHqqejyqgEC,/dns/head-1-p2p.testnet-1.testnet.allora.network/tcp/32131/p2p/12D3KooWEUNWg7YHeeCtH88ju63RBfY5hbdv9hpv84ffEZpbJszt,/dns/head-2-p2p.testnet-1.testnet.allora.network/tcp/32132/p2p/12D3KooWATfUSo95wtZseHbogpckuFeSvpL4yks6XtvrjVHcCCXk \
           --topic=allora-topic-9-worker \
           --allora-chain-key-name=worker-9 \
-	  --allora-chain-worker-mode=worker \
+      	  --allora-chain-worker-mode=worker \
           --allora-chain-restore-mnemonic='$wallet_seed' \
           --allora-node-rpc-address=https://allora-rpc.testnet-1.testnet.allora.network \
           --allora-chain-topic-id=9
@@ -425,6 +425,7 @@ services:
         aliases:
           - worker
         ipv4_address: 172.22.0.19
+
   head:
     container_name: head-basic-eth-pred
     image: alloranetwork/allora-inference-base-head:latest
