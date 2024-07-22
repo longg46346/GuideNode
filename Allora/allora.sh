@@ -38,7 +38,7 @@ services:
           - inference
         ipv4_address: 172.22.0.4
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8000/inference/ETH|| exit 1 && curl -f http://localhost:8011/inference/BTC || exit 1 && curl -f http://localhost:8011/inference/SOL || exit 1  && curl -f http://localhost:8011/inference/BNB || exit 1  && curl -f http://localhost:8011/inference/ARB || exit 1"]
+      test: ["CMD", "curl", "-f", "http://localhost:8000/inference/ETH|| exit 1 && curl -f http://localhost:8011/inference/BTC || exit 1 && curl -f http://localhost:8000/inference/SOL || exit 1  && curl -f http://localhost:8000/inference/BNB || exit 1  && curl -f http://localhost:8000/inference/ARB || exit 1"]
       interval: 10s
       timeout: 5s
       retries: 12
